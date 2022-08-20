@@ -1,0 +1,30 @@
+body {
+    font-family: "Montserrat";
+}
+
+.body-wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    /* outline: 1px solid lightskyblue; */
+}
+
+/* 
+div,
+h1,
+h2,
+h3,
+h4 {
+    outline: 1px dashed lightgreen;
+} 
+*/
+
+/*
+.main {}
+.aside {}
+.main-div {}
+.aside-div {}
+.body-title {}
+.body-subtitle {}
+.main-title {}
+.div-title {} 
+*/
