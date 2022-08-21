@@ -1,42 +1,77 @@
 body {
     font-family: "Montserrat";
+    font-style: normal;
+    color: #000000;
 }
 
 .body-wrapper {
     width: 1200px;
     margin: 0 auto;
-    /* outline: 1px solid lightskyblue; */
 }
 
-/* 
-div,
-h1,
-h2,
-h3,
-h4 {
-    outline: 1px dashed lightgreen;
-} 
-*/
-
-/*
 .main {}
-.aside {}
-.main-div {}
-.aside-div {}
-.body-title {}
-.body-subtitle {}
-.main-title {}
-.div-title {}
-*/
 
+.aside {}
+
+.main-div {}
+
+.aside-div {}
+
+.main-title {
+    font-size: 45px;
+    line-height: 55px;
+    font-weight: 700;
+}
+
+.main-subtitle {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+}
+
+.body-title {
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 700;
+}
+
+.div-title {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+.div-title_mark {
+    color: #fb6d3a;
+}
+
+.div-subtitle {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+}
+
+.body-text {
+    color: #595959;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.time-gap {
+    color: #a8a8a8;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+}
+
+/* * Різне - неробоче */
 
 .all_used_colors {
-
-background: #000000;
-background: #ffffff;
-background: #595959;
-background: #fb6d3a;
-background: #a8a8a8;
-background: #1e2939; 
-
+    background: #000000;
+    background: #ffffff;
+    background: #595959;
+    background: #fb6d3a;
+    background: #a8a8a8;
+    background: #1e2939;
 }
