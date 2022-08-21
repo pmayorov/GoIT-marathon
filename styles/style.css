@@ -116,9 +116,9 @@ body {
     margin-right: 10px;
 }
 
-.list-item {
-    /* padding-left: 2px; */
-}
+/* .list-item {
+    padding-left: 2px;
+} */
 
 
 .list-projects {
@@ -252,7 +252,7 @@ todo Але! Тепер не можу вирівняти контент спис
 }
 
 .aside-div div+div {
-    margin-top: 45px;
+    margin-top: 50px;
 }
 
 .aside-link_phone,
