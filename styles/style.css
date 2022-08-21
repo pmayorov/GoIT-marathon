@@ -2,20 +2,52 @@ body {
     font-family: "Montserrat";
     font-style: normal;
     color: #000000;
+    background-color: #e5e5e5;
 }
 
 .body-wrapper {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 40px auto 80px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-.main {}
+.main {
+    /* outline: 1px solid rebeccapurple; */
+    background-color: #ffffff;
+}
 
-.aside {}
+.main-div {
+    /* outline: 1px dashed darkcyan; */
+    margin-left: 88px;
+    margin-right: 217px;
+}
 
-.main-div {}
+.main-div:first-of-type {
+    margin-top: 142px;
+    margin-right: 342px;
+}
 
-.aside-div {}
+.div-projects {
+    margin-top: 40px;
+}
+
+.div-work {
+    margin-top: 50px;
+}
+
+.div-education {
+    margin-top: 40px;
+}
+
+.main-div:last-of-type {
+    margin-bottom: 107px;
+}
+
+.div-about .body-text {
+    margin-top: 12px;
+}
 
 .main-title,
 .main-subtitle,
@@ -28,9 +60,13 @@ body {
 }
 
 .main-title {
+    margin-top: 19px;
     font-size: 45px;
     line-height: 55px;
     font-weight: 700;
+    margin-bottom: 24px;
+
+    /* todo Подумати! Може краще margin-top в наступному блоці, ніж margin-bottom в цьому заголовку? */
 }
 
 .main-subtitle {
@@ -46,6 +82,8 @@ body {
 }
 
 .div-title {
+    margin-top: 16px;
+    /* * В макеті відстані одного типу заголовка різні (12-16-20px) – зробив однакові (16px) */
     font-size: 16px;
     line-height: 20px;
     font-weight: 700;
@@ -56,51 +94,65 @@ body {
 }
 
 .div-subtitle {
+    margin-top: 11px;
     font-size: 14px;
     line-height: 17px;
     font-weight: 700;
 }
 
 .list {
-    margin: 0;
-    padding: 0;
+    margin-top: 8px;
+    list-style-type: none;
 }
+
+.list .list-item::before {
+    background-color: #595959;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.list-item {
+    padding-left: 2px;
+}
+
 
 .list-projects {
+    margin-top: 8px;
     counter-reset: num;
-
-}
-
-.list-projects .list-item {
-    display: flex;
-    justify-content: space-between;
-    align-content: flex-end;
-    list-style-type: decimal;
-    gap: 12px;
-}
-
-.list-projects .list-item::before {
-    counter-increment: num+9;
-    content: counter(num)".";
-    font-weight: 700;
-    min-width: 25px;
-    /* outline: 1px solid silver; */
 }
 
 /* 
 
-* НАВОРТИВ! Щоб зробити ширину під ПРОЕКТ - ПІДКРЕСЛЕННЯ - СКІЛИ динамічно змінюваними від контентну в них оформив пункти списку як flex. АЛЕ! Ця фігня прибрала нативну нумерацію в списках. Повертаю за допогою псевдоелемента та лічильника для властивостей counter() 
+* НАВОРТИВ КАРОЧ! Щоб зробити ширину під ПРОЕКТ - ПІДКРЕСЛЕННЯ - СКІЛИ динамічно змінюваними від контентну в них оформив пункти списку як flex. АЛЕ! Ця фігня прибрала нативну нумерацію в списках. Повертаю за допомогою псевдоелементів та лічильника counter() 
 
-* ЩЕ ФІГНЯ ВИЛІЗЛА :( такий варік нумерації не вирівнює по одній вертикалі його контент пунктів бо ширина шрифта нумерації різна й тому відстань до опису пункта також виходить різна. "Закостилив" стаціонарним min-width для нумерації, але це явно не "айс"!
+* ЩЕ ФІГНЯ ВИЛІЗЛА :( такий варік нумерації не вирівнює по лівій вертикалі  контент в пунктах бо ширина шрифта в нумерації різна й тому відстань до опису пункта також виходить різна. "ЗакостИлив" стаціонарним min-width для нумерації, але це явно не "айс"!
 
-todo Кароч якось продумати! В черговий раз :)
+todo: Кароч якось продумати… в черговий раз :)
 
 */
+
+.list-projects-item {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+    gap: 12px;
+}
+
+.list-projects-item::before {
+    counter-increment: num;
+    content: counter(num)".";
+    font-weight: 700;
+    min-width: 15px;
+}
 
 .list-projects_link {
     text-decoration: none;
     color: #5a80d1;
-    /* outline: 1px solid silver; */
 }
 
 .list-projects_link:hover {
@@ -115,7 +167,6 @@ todo Кароч якось продумати! В черговий раз :)
     content: "";
     display: flex;
     height: 1.2em;
-    /* ! ALARM - Якщо зміниться font-size в списку, то border-botton, буде не місці й потрібно буде міняти height */
     border-bottom: 1px dashed #a8a8a8;
 }
 
@@ -137,6 +188,8 @@ todo Кароч якось продумати! В черговий раз :)
 }
 
 .time-gap {
+    margin-top: 11px;
+    margin-bottom: 0;
     color: #a8a8a8;
     font-size: 12px;
     line-height: 15px;
@@ -148,9 +201,63 @@ todo Кароч якось продумати! В черговий раз :)
     content: "\00a0|\00a0";
 }
 
+/* Фото та навички */
+
+.aside {
+    background-color: #1e2939;
+}
+
+.aside-div,
+.aside-div .body-text,
+.aside-div .aside-link {
+    color: #ffffff;
+}
+
+.aside-link {
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.aside-link:hover {
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+/* 
+* Оформлення маркерів списку
+Оскількі маркері й сам список мають різний колір:
+1. Відключаємо маркери нативні маркери.
+2. Формуємо псевдоелемент: інлайновий блок 5*5 px + margin-right потрібної величини.
+3. Щоб сам маркер й інфо навпроти були на одному рівні – vertical-align: middle для ::before та для пункту списку (li)
+*/
+
+.list-skills .list-item {
+    vertical-align: middle;
+}
+
+.list-skills .list-item::before {
+    background-color: #fb6d3a;
+}
+
 .cv-photo {
     display: block;
     margin: 0;
+    margin-top: 40px;
+}
+
+.aside-div {
+    margin: 50px 40px 0 40px;
+}
+
+.aside-div div+div {
+    margin-top: 45px;
+}
+
+.aside-link_phone,
+.aside-link_mail {
+    display: inline-block;
+    width: 26px;
+    font-weight: 700;
 }
 
 /* * Різне - неробоче */
