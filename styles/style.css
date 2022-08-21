@@ -5,7 +5,7 @@ body {
 }
 
 .body-wrapper {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -16,6 +16,16 @@ body {
 .main-div {}
 
 .aside-div {}
+
+.main-title,
+.main-subtitle,
+.body-title,
+.div-title,
+.div-subtitle,
+.body-text {
+    margin: 0;
+    padding: 0;
+}
 
 .main-title {
     font-size: 45px;
@@ -51,6 +61,74 @@ body {
     font-weight: 700;
 }
 
+.list {
+    margin: 0;
+    padding: 0;
+}
+
+.list-projects {
+    counter-reset: num;
+
+}
+
+.list-projects .list-item {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+    list-style-type: decimal;
+    gap: 12px;
+}
+
+.list-projects .list-item::before {
+    counter-increment: num+9;
+    content: counter(num)".";
+    font-weight: 700;
+    min-width: 25px;
+    /* outline: 1px solid silver; */
+}
+
+/* 
+
+* НАВОРТИВ! Щоб зробити ширину під ПРОЕКТ - ПІДКРЕСЛЕННЯ - СКІЛИ динамічно змінюваними від контентну в них оформив пункти списку як flex. АЛЕ! Ця фігня прибрала нативну нумерацію в списках. Повертаю за допогою псевдоелемента та лічильника для властивостей counter() 
+
+* ЩЕ ФІГНЯ ВИЛІЗЛА :( такий варік нумерації не вирівнює по одній вертикалі його контент пунктів бо ширина шрифта нумерації різна й тому відстань до опису пункта також виходить різна. "Закостилив" стаціонарним min-width для нумерації, але це явно не "айс"!
+
+todo Кароч якось продумати! В черговий раз :)
+
+*/
+
+.list-projects_link {
+    text-decoration: none;
+    color: #5a80d1;
+    /* outline: 1px solid silver; */
+}
+
+.list-projects_link:hover {
+    font-weight: 700;
+}
+
+.list-projects_gap {
+    flex-grow: 1;
+}
+
+.list-projects_gap::after {
+    content: "";
+    display: flex;
+    height: 1.2em;
+    /* ! ALARM - Якщо зміниться font-size в списку, то border-botton, буде не місці й потрібно буде міняти height */
+    border-bottom: 1px dashed #a8a8a8;
+}
+
+.list-projects_skills::after {
+    content: "\00a0]";
+    font-weight: 700;
+}
+
+.list-projects_skills::before {
+    content: "[\00a0";
+    font-weight: 700;
+}
+
 .body-text {
     color: #595959;
     font-size: 14px;
@@ -63,6 +141,16 @@ body {
     font-size: 12px;
     line-height: 15px;
     font-weight: 400;
+}
+
+.time-gap_strip::before {
+    color: #000000;
+    content: "\00a0|\00a0";
+}
+
+.cv-photo {
+    display: block;
+    margin: 0;
 }
 
 /* * Різне - неробоче */
