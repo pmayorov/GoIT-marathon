@@ -20,6 +20,9 @@ https://t.me/goitmarathon_bot
 ### Посилання на макет
 https://www.figma.com/file/XNoGCnwovP19H9hvUjP2gO/Resume
 
+### Макет в форматі PDF
+[resume.pdf](_src\resume.pdf)
+
 ### FAQ щодо проходження марафону
 https://goit.ua/lp/faq/ua/
 
@@ -29,5 +32,5 @@ https://youtu.be/gYQTrHVSGp4
 ### Форма для заповнення по SoftSkills
 https://forms.gle/tZhCaN9jRtGgWB1v6
 
-### Презентация до відео
-[PDF файл](_src/soft_skills.pdf)
+### Презентация до відео (PDF)
+[soft_skills.pdf](_src/soft_skills.pdf)
