@@ -2,7 +2,7 @@
 **Проводить міжнародна IT-школа [GoIT](https://goit.ua/?lang=uk)**
 
 ## План марафону:
-**День 1-й – 19.00** та **День 2 – 19:00-й.** Познайомимося з макетом, створимо структуру проекту і займемося HTML версткою макета.
+**День 1-й – 19.00** та **День 2-й – 19:00-й.** Познайомимося з макетом, створимо структуру проекту і займемося HTML версткою макета.
 
 **День 3-й – 19:00** Розглянемо стилі CSS і підключимо шрифт. **Бонус** – відео-заняття по Soft Skills від Антона Чорного (CEO GoIT).
 
@@ -20,6 +20,9 @@ https://t.me/goitmarathon_bot
 ### Посилання на макет
 https://www.figma.com/file/XNoGCnwovP19H9hvUjP2gO/Resume
 
+### Макет в форматі PDF
+[resume.pdf](_src\resume.pdf)
+
 ### FAQ щодо проходження марафону
 https://goit.ua/lp/faq/ua/
 
@@ -29,5 +32,5 @@ https://youtu.be/gYQTrHVSGp4
 ### Форма для заповнення по SoftSkills
 https://forms.gle/tZhCaN9jRtGgWB1v6
 
-### Презентация до відео
-[PDF файл](_src/soft_skills.pdf)
+### Презентация до відео (PDF)
+[soft_skills.pdf](_src/soft_skills.pdf)

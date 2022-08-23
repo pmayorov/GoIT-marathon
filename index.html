@@ -6,147 +6,149 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Резюме &middot; Марафон GoIT</title>
-  <link rel="stylesheet" type="text/css" href="styles/layout-markup.css">
+
+  <!-- Шрифти -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- <link rel="stylesheet" type="text/css" href="styles/fonts.css"> -->
+  <!-- todo. Чогось не підключаються шрифти з каталогу. Розібратись! -->
+
+  <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
 </head>
 
 <body>
 
   <!-- Body Wrapper -->
-  <div>
+  <div class="body-wrapper">
 
     <!-- Головна інформація -->
-    <main>
+    <main class="main">
 
       <!-- Хто я -->
-      <div>
-        <h2>Фронт-енд розробник</h2>
-        <h1>Павло Майоров</h1>
+      <div class="main-div div-about">
+        <h2 class="main-subtitle">Фронт-енд розробник</h2>
+        <h1 class="main-title">Павло Майоров</h1>
         <div>
-          <p>Вітаю, я Павло. Мені лише 50 але ще мрію встигнути зануритись в IT :)</p>
-          <p>Війна дещо змінила моє теперішнє фінансове й професійне становище, тому намагаюся змінити свою професійну
-            спеціалізацію.</p>
-          <p>Щодо мотивації – її в мене більш ніж достатньо! Та й студентський досвід дпомагає нові знання та навички
-            освоювати швидко й з задоволенням.</p>
-          <p>Хоча, я тверезо оцінюю й усвідомлюю вимоги HR-ів щодо віку рекрутерів на ринку праці, але дуже прошу надати
-            мені шанс!</p>
-          <p>Буду найкращим... у свої віковій категорії ;) – гарантую! А також, стану вагомим прикладом того, як за
-            наявністю великого бажання й мотивації якісно "увійти в АйТі"!</p>
+          <p class="body-text">Вітаю, я Павло. Мені лише 50 але ще мрію встигнути зануритись в IT :)</p>
+          <p class="body-text">Війна дещо змінила моє теперішнє фінансове й професійне становище, тому намагаюся змінити свою професійну спеціалізацію.</p>
+          <p class="body-text">Щодо мотивації – її в мене більш ніж достатньо! Та й студентський досвід дпомагає нові знання та навички опановувати доволі швидко й з задоволенням.</p>
+          <p class="body-text">Хоча, я тверезо оцінюю й усвідомлюю вимоги HR-ів щодо віку рекрутерів на ринку праці, але дуже прошу надати мені шанс!</p>
+          <p class="body-text">Буду найкращим... у свої віковій категорії ;)! А також, стану вагомим прикладом того, як за наявністю великого бажання й мотивації якісно "увійти в АйТі" опісля 50-ти!</p>
         </div>
       </div>
 
       <!-- Проекти  -->
-      <div>
-        <h3>Проекти</h3>
-        <ol>
-          <li><a href="https://pmayorov.github.io/Byte-Education-marathon/">Byte-Education-marathon</a> ... [HTML5,
-            CSS3]</li>
-          <li><a href="https://pmayorov.github.io/GoIT-marathon/">GoIT-marathon</a> ... [HTML5, CSS3]</li>
-          <li><a href="https://github.com/pmayorov">Незабаром</a> ... [JavaScript, React.js, PHP]</li>
+
+      <div class="main-div div-projects">
+        <h3 class="body-title">Проекти</h3>
+        <ol class="list-projects body-text">
+          <li class="list-projects-item"><a class="list-projects_link" href="https://pmayorov.github.io/Byte-Education-marathon/" target="_blank">Byte-Education-marathon</a><span class="list-projects_gap"></span><span class="list-projects_skills">HTML5, CSS3</span></li>
+          <li class="list-projects-item"><a class="list-projects_link" href="https://pmayorov.github.io/GoIT-marathon/" target="_blank">GoIT-marathon</a><span class="list-projects_gap"></span><span class="list-projects_skills">HTML5, CSS3</span></li>
+          <li class="list-projects-item"><a class="list-projects_link" href="https://github.com/pmayorov" target="_blank">Незабаром</a><span class="list-projects_gap"></span><span class="list-projects_skills">JavaScript, React.js, PHP</span></li>
         </ol>
       </div>
 
       <!-- Робочий досвід  -->
-      <div>
-        <h3>Досвід роботи</h3>
-        <div>
-          <h4>Фронт-енд розробник <span>Freelance</span></h4>
-          <p>Листопад-Грудень 2022 – хто зна? | Україна</p>
-          <ul>
-            <li>Дизайн проектів.</li>
-            <li>Розробка HTML/CSS/JavaScript.</li>
-            <li>Посадка верстки на CMS.</li>
-            <li>Підтримка існуючих проеків.</li>
-          </ul>
-        </div>
+      <div class="main-div div-work">
+        <h3 class="body-title">Досвід роботи</h3>
+        <h4 class="div-title">Фронт-енд розробник <span class="div-title_mark">Freelance</span></h4>
+        <p class="time-gap">Листопад-Грудень 2022 – хто зна? <span class="time-gap_strip"></span> Україна</p>
+        <ul class="list body-text">
+          <li class="list-item">Дизайн проектів.</li>
+          <li class="list-item">Розробка HTML/CSS/JavaScript.</li>
+          <li class="list-item">Посадка верстки на CMS.</li>
+          <li class="list-item">Підтримка існуючих проеків.</li>
+        </ul>
 
-        <div>
-          <h4>Технічний редактор <span>Профспілкова організація</span></h4>
-          <p>Травень 2007 - по сьогодні | Україна</p>
-          <ul>
-            <li>Макетування, дизайн, верстка та підготовка до друку газети, а також брошур, листівок, плакатів,
-              бігбордів та ін. поліграфічної продукції.</li>
-            <li>Створення презентацій.</li>
-            <li>Фото та відеозйомка масових заходів. Базовий відеомонтаж.</li>
-            <li>Розробка технічного завдання на сайт та супровід його створення сторонньою дизайн-студією.</li>
-            <li>Підтримка адмінки сайту та FB-сторінки. HTML/CSS - базовий рівень.</li>
-            <li>Налаштування локальної комп'ютерної мережі відділу інформації та комунікацій.</li>
-            <li>Встановлення та налаштування програмного забезпечення.</li>
-          </ul>
-        </div>
+        <h4 class="div-title">Технічний редактор <span class="div-title_mark">Профспілкова організація</span></h4>
+        <p class="time-gap">Травень 2007 – по сьогодні <span class="time-gap_strip"></span> Україна</p>
+        <ul class="list body-text">
 
-        <div>
-          <h4>Начальник дільниці комп'ютерної верстки <span>Комунальне підприємство &laquo;Криворізька
-              друкарня&raquo;</span></h4>
-          <p>Грудень 1997 - Квітень 2007 | Україна</p>
-          <ul>
-            <li>Макетування, дизайн та верстка міських та регіональних періодичних видань (газет, журналів).</li>
-            <li>Розробка та дизайн рекламної продукції.</li>
-            <li>Препрес (переддрукарський контроль) готових макетів.</li>
-            <li>Налаштування локальної мережі комп'ютерної ділянки.</li>
-            <li>Встановлення та налаштування програмного забезпечення.</li>
-          </ul>
-        </div>
+          <li class="list-item">Макетування, дизайн, верстка та підготовка до друку газети, а також брошур, листівок, плакатів, бігбордів та ін. поліграфічної продукції.</li>
+          <li class="list-item">Створення презентацій.</li>
+          <li class="list-item">Фото та відеозйомка масових заходів. Базовий відеомонтаж.</li>
+          <li class="list-item">Розробка технічного завдання на сайт та супровід його створення сторонньою дизайн-студією.</li>
+          <li class="list-item">Підтримка адмінки сайту та FB-сторінки. HTML/CSS – базовий рівень.</li>
+          <li class="list-item">Налаштування локальної комп'ютерної мережі відділу інформації та комунікацій.</li>
+          <li class="list-item">Встановлення та налаштування програмного забезпечення.</li>
+        </ul>
+
+        <h4 class="div-title">Начальник дільниці комп'ютерної верстки <span class="div-title_mark">Комунальне підприємство &laquo;Криворізька друкарня&raquo;</span></h4>
+        <p class="time-gap">Грудень 1997 – Квітень 2007 <span class="time-gap_strip"></span> Україна</p>
+        <ul class="list body-text">
+          <li class="list-item">Макетування, дизайн та верстка міських та регіональних періодичних видань (газет, журналів).</li>
+          <li class="list-item">Розробка та дизайн рекламної продукції.</li>
+          <li class="list-item">Препрес (переддрукарський контроль) готових макетів.</li>
+          <li class="list-item">Налаштування локальної мережі комп'ютерної ділянки.</li>
+          <li class="list-item">Встановлення та налаштування програмного забезпечення.</li>
+        </ul>
       </div>
 
       <!-- Освіта  -->
-      <div>
-        <h3>Освіта</h3>
+      <div class="main-div div-education">
+        <h3 class="body-title">Освіта</h3>
         <div>
-          <h4><span>Криворізький технічний університет</span></h4>
-          <p>Електротехнічний факультет</p>
-          <p>Вересень 1991 – Червень 1996</p>
+          <h4 class="div-title"><span class="div-title_mark">Криворізький технічний університет</span></h4>
+          <h5 class="div-subtitle">Електротехнічний факультет</h5>
+          <p class="time-gap">Вересень 1991 – Червень 1996</p>
         </div>
         <div>
-          <h4><span>Криворізький гірничий коледж</span></h4>
-          <p>Електронно-обчислювальні машини прилади та пристрої</p>
-          <p>Вересень 1987 – Червень 1991</p>
+          <h4 class="div-title"><span class="div-title_mark">Криворізький гірничий коледж</span></h4>
+          <h5 class="div-subtitle">Електронно-обчислювальні машини прилади та пристрої</h5>
+          <p class="time-gap">Вересень 1987 – Червень 1991</p>
         </div>
-
-        <!-- ! Зауважененя від ментора -->
-        <!-- todo З точки зору семантики в блоці Education краще використовувати таку структуру: div > h3 + h4 + h4 + p. Не потрібно перевантажувати верстку зайвими тегами -->
-
       </div>
 
     </main>
 
-    <!-- Додаткова інформація -->
-    <aside>
+    <!-- Сайдбар / Фото та навички -->
 
-      <img src="images/myphoto.jpg" alt="Фото власника резюме">
+    <aside class="aside">
 
-      <div>
-        <div>
-          <h3>Контакти</h3>
-          <p><a href="tel:+380685430345">Т: +380 68 5430345</a></p>
-          <p><a href="mailto:pmayorov@gmail.com">М: pmayorov@gmail.com</a></p>
-        </div>
+      <img class="cv-photo" src="images/myphoto.jpg" alt="Фото власника резюме">
+
+      <div class="aside-div">
 
         <div>
-          <h3>Технічні навички</h3>
-          <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>GIT</li>
-            <li>Photoshop</li>
-            <li>Illustrator
-            <li>InDesign</li>
-            <li>Acrobat</li>
-            <li>Prerpress</li>
-            <li>Typography</li>
-            <li>Layout making</li>
+          <h3 class="body-title">Контакти</h3>
+          <ul class="list body-text">
+            <li><span class="aside-link_phone">Т:</span><a class="aside-link" href="tel:+380685430345">+380 68 5430345</a></li>
+            <li><span class="aside-link_mail">M:</span><a class="aside-link" href="mailto:pmayorov@gmail.com">pmayorov@gmail.com</a></li>
           </ul>
         </div>
 
         <div>
-          <h3>Комунікативні навички</h3>
-          <ul>
-            <li>Комунікабельність</li>
-            <li>Відповідальність</li>
-            <li>Вміння працювати в команді</li>
-            <li>Ввічливість</li>
-            <li>Позитивний настрій</li>
+          <h3 class="body-title">Технічні навички</h3>
+          <ul class="list list-skills body-text">
+            <li class="list-item">HTML5</li>
+            <li class="list-item">CSS3</li>
+            <li class="list-item">GIT</li>
+            <li class="list-item">Photoshop</li>
+            <li class="list-item">Illustrator</li>
+            <li class="list-item">InDesign</li>
+            <li class="list-item">Acrobat</li>
+            <li class="list-item">Prerpress</li>
+            <li class="list-item">Typography</li>
+            <li class="list-item">Layout making</li>
           </ul>
         </div>
+
+        <div>
+          <h3 class="body-title">Комунікативні навички</h3>
+          <ul class="list list-skills body-text">
+            <li class="list-item">Комунікабельність</li>
+            <li class="list-item">Відповідальність</li>
+            <li class="list-item">Вміння працювати в команді</li>
+            <li class="list-item">Ввічливість</li>
+            <li class="list-item">Позитивний настрій</li>
+          </ul>
+        </div>
+
       </div>
 
     </aside>

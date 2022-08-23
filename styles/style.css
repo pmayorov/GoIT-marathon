@@ -1,0 +1,274 @@
+body {
+    font-family: "Montserrat";
+    font-style: normal;
+    color: #000000;
+    background-color: #e5e5e5;
+}
+
+.body-wrapper {
+    max-width: 1200px;
+    margin: 40px auto 80px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main {
+    /* outline: 1px solid rebeccapurple; */
+    background-color: #ffffff;
+}
+
+.main-div {
+    /* outline: 1px dashed darkcyan; */
+    margin-left: 88px;
+    margin-right: 217px;
+}
+
+.main-div:first-of-type {
+    margin-top: 142px;
+    margin-right: 342px;
+}
+
+.div-projects {
+    margin-top: 40px;
+}
+
+.div-work {
+    margin-top: 50px;
+}
+
+.div-education {
+    margin-top: 40px;
+}
+
+.main-div:last-of-type {
+    margin-bottom: 107px;
+}
+
+.div-about .body-text {
+    margin-top: 12px;
+}
+
+.main-title,
+.main-subtitle,
+.body-title,
+.div-title,
+.div-subtitle,
+.body-text {
+    margin: 0;
+    padding: 0;
+}
+
+.main-title {
+    margin-top: 19px;
+    font-size: 45px;
+    line-height: 55px;
+    font-weight: 700;
+    margin-bottom: 24px;
+
+    /* todo: Подумати! Може краще margin-top в наступному блоці, ніж margin-bottom в цьому заголовку? */
+}
+
+.main-subtitle {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+}
+
+.body-title {
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 700;
+}
+
+.div-title {
+    margin-top: 16px;
+    /* * В макеті відстані одного типу заголовка різні (12-16-20px) – зробив однакові (16px) */
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+.div-title_mark {
+    color: #fb6d3a;
+}
+
+.div-subtitle {
+    margin-top: 11px;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+}
+
+.list {
+    margin-top: 8px;
+    list-style-type: none;
+}
+
+.list .list-item::before {
+    background-color: #595959;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* .list-item {
+    padding-left: 2px;
+} */
+
+
+.list-projects {
+    margin-top: 8px;
+    counter-reset: num;
+}
+
+/* 
+
+* НАВОРТИВ КАРОЧ! Щоб зробити ширину під ПРОЕКТ - ПІДКРЕСЛЕННЯ - СКІЛИ динамічно змінюваними від контентну в них оформив пункти списку як flex. АЛЕ! Ця фігня прибрала нативну нумерацію в списках. Повертаю за допомогою псевдоелементів та лічильника counter() 
+
+* ЩЕ ФІГНЯ ВИЛІЗЛА :( Такий варік нумерації не вирівнює по лівій вертикалі контент в пунктах бо ширина шрифта в нумерації різна й тому відстань до опису пункта також виходить різна. "ЗакостИлив" стаціонарним min-width для нумерації, але це явно не "айс"!
+
+todo: Кароч багато чого потягнуло поганого за собою це рішення, треба міняти :\
+
+*/
+
+.list-projects-item {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+    gap: 12px;
+}
+
+.list-projects-item::before {
+    counter-increment: num;
+    content: counter(num)".";
+    font-weight: 700;
+    min-width: 15px;
+}
+
+.list-projects_link {
+    text-decoration: none;
+    color: #5a80d1;
+}
+
+.list-projects_link:hover {
+    font-weight: 700;
+}
+
+.list-projects_gap {
+    flex-grow: 1;
+}
+
+.list-projects_gap::after {
+    content: "";
+    display: flex;
+    height: 1.2em;
+    border-bottom: 1px dashed #a8a8a8;
+}
+
+.list-projects_skills::after {
+    content: "\00a0]";
+    font-weight: 700;
+}
+
+.list-projects_skills::before {
+    content: "[\00a0";
+    font-weight: 700;
+}
+
+.body-text {
+    color: #595959;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.time-gap {
+    margin-top: 11px;
+    margin-bottom: 0;
+    color: #a8a8a8;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 400;
+}
+
+.time-gap_strip::before {
+    color: #000000;
+    content: "\00a0|\00a0";
+}
+
+/* Сайдбар / Фото та навички */
+
+.aside {
+    background-color: #1e2939;
+}
+
+.aside-div,
+.aside-div .body-text,
+.aside-div .aside-link {
+    color: #ffffff;
+}
+
+.aside-link {
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.aside-link:hover {
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+/* 
+* Оформлення маркерів списку. Оскількі маркери й сам список мають різний колір маю таке рішення, але як побачив потім не дуже підходить.
+1. Відключаємо нативні маркери.
+2. Формуємо псевдоелемент: інлайновий блок 5*5 px + margin-right потрібної величини.
+3. Щоб сам маркер та інфа навпроти нього були на одному рівні – vertical-align: middle для ::before та для пункту списку (li)
+todo Але! Тепер не можу вирівняти контент списків і знову по лівій вертикалі – щоб "сєпулькі" окремо, а контент, якщо він в декілька строк - окремо! ррррр!
+*/
+
+.list-skills .list-item {
+    vertical-align: middle;
+}
+
+.list-skills .list-item::before {
+    background-color: #fb6d3a;
+}
+
+.cv-photo {
+    display: block;
+    width: 370px;
+    height: auto;
+    margin: 0;
+    margin-top: 40px;
+}
+
+.aside-div {
+    margin: 50px 40px 0 40px;
+}
+
+.aside-div div+div {
+    margin-top: 50px;
+}
+
+.aside-link_phone,
+.aside-link_mail {
+    display: inline-block;
+    width: 26px;
+    font-weight: 700;
+}
+
+/* * Різне - неробоче */
+
+.all_used_colors {
+    background: #000000;
+    background: #ffffff;
+    background: #595959;
+    background: #fb6d3a;
+    background: #a8a8a8;
+    background: #1e2939;
+}
