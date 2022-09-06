@@ -17,9 +17,6 @@
 ### Чат-бот марафону
 https://t.me/goitmarathon_bot
 
-### Посилання на макет
-https://www.figma.com/file/XNoGCnwovP19H9hvUjP2gO/Resume
-
 ### Макет в форматі PDF
 [resume.pdf](_src\resume.pdf)
 
